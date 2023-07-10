@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <title>SWASTHYA</title>
+</head>
+<style>
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* .about h4{
+       color: grey;
+    } */
+    .Btns:hover{
+        color: grey;
+    }
+    .hero {
+        /* background: #000; */
+        width: 100%;
+        /* min-height: 100vh; */
+        padding-left: 3%;
+        padding-right: 3%;
+        /* padding-top: 80px;s */
+        box-sizing: border-box;
+        text-align: center;
+        color: grey;
+    }
+
+    .row {
+        /* margin-top: 80px; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .col {
+        flex-basis: 26%;
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+        min-width: 200px;
+        margin-bottom: 20px;
+        z-index: 2;
+    }
+
+    .col::before,
+    .col::after {
+        content: "";
+        height: 0px;
+        width: 0px;
+        background: linear-gradient(135deg, #0d6efd, #0d6efd);
+        position: absolute;
+        z-index: -1;
+        animation: none;
+    }
+
+    @keyframes stroke {
+        0% {
+            height: 8px;
+            width: 0px;
+        }
+
+        50% {
+            height: 8px;
+            width: calc(100% + 8px);
+        }
+
+        100% {
+            height: calc(100% + 16px);
+            width: calc(100% + 1px);
+        }
+    }
+
+    .col::before {
+        left: 0%;
+        top: -8px;
+    }
+
+    .col::after {
+        right: 0%;
+        bottom: -8px;
+    }
+
+    .col:hover::before,
+    .col:hover::after {
+        animation: stroke 0.4s linear;
+        animation-fill-mode: forwards;
+    }
+
+    .profile {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        background: rgb(184, 206, 255);
+    }
+
+    .profile img {
+        width: 100%;
+    }
+
+    .profile h2 {
+        margin: 25px 0px 10px;
+        font-weight: 500;
+    }
+
+    .profile p {
+        margin-bottom: 10px;
+        color: #0d6efd;
+    }
+
+    .img-responsive {
+        width: 80%;
+        height: 90%;
+    }
+
+    .services {
+        width: 50%;
+    }
+
+    .services h4 {
+        display: inline;
+    }
+
+    .services i {
+        font-size: 22px;
+        color: #0d6efd;
+    }
+
+    .ChoseUs {
+        height: 80vh;
+    }
+
+    .carddd {
+        width: 200px;
+        height: 270px;
+        background-color: rgb(184, 206, 255);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carddd img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .carddd p,
+    .carddd h6 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="main container-fluid">
+        <nav>
+            <div class="row">
+                <div class="container w-50 mt-2">
+                    <a href="./index.html">
+                        <span class="text-primary">S</span>
+                        <span>W</span>
+                        <span>A</span>
+                        <span>S</span>
+                        <span>T</span>
+                        <span>H</span>
+                        <span>Y</span>
+                        <span>A</span>
+                    </a>
+                </div>
+                <div class="container w-50 mt-3">
+                    <ul class="d-flex justify-content-evenly">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./pages/products.html">Products</a></li>
+                        <li><a href="./pages/facility.html">Facility</a></li>
+                        <li><a href="./pages/reviews.html">Review</a></li>
+                        <li><a href="./pages/contact.html">Contact Us</a></li>
+                        <li><a href="./pages/signin.html"><i class="fas fa-user"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container w-50 title">
+            <h1><span class="text-primary">Stay </span>Home,<span class="text-primary"> Stay </span>Safe</h1>
+            <h2>Caring for You</h2>
+            <a href="./pages/facility.html" class="mx-3"><button class="Btns">Consult Now</button></a>
+            <a href="./pages/products.html"><button class="Btns">Buy Products</button></a>
+        </div>
+    </div>
+    <section id="ourDoctors ">
+        <div class="container">
+            <br>
+            <br>
+            <h1><span class="text-primary">Our</span> Doctors</h1>
+            <hr>
+            <br>
+            <div class="hero">
+                <div class="row">
+                    <div class="col mx-1">
+                        <div class="profile">
+                            <img
+                                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+                            <h2>Dr. Robert</h2>
+                            <p>MBBS</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="profile">
+                            <img
+                                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+                            <h2>Dr. Shiana</h2>
+                            <p>MS</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="profile">
+                            <img
+                                src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+                            <h2>Dr. Elliot</h2>
+                            <p>MD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="WhyChoseUs">
+        <div class="container">
+            <br>
+            <br>
+            <h1><span class="text-primary">Why</span> Chose Us</h1>
+            <hr>
+            <br>
+            <div class="tab-content-container">
+                <div class="tab-content active show">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 ChoseUs">
+                                <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+                                    class="img-responsive" alt="Image">
+                            </div>
+                            <div class="col-md-6">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+                                    officia perferendis modi impedit, rem quasi veritatis. Consectetur
+                                    obcaecati incidunt, quae rerum, accusamus sapiente fuga vero at. Quia,
+                                    labore, reprehenderit illum dolorem quae facilis reiciendis quas
+                                    similique totam sequi ducimus temporibus ex nemo, omnis perferendis
+                                    earum fugit impedit molestias animi vitae.
+                                </p>
+                                <div class="row">
+                                    <div class="services">
+                                        <i class="fas fa-check"></i>
+                                        <h4>Qualified Facilities</h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde maiores
+                                            cupiditate a fugit cumque sapiente numquam illum sit assumenda ducimus
+                                            culpa, necessitatibus praesentium repellat voluptate esse aspernatur tempore
+                                            laboriosam maxime perspiciatis reiciendis.</p>
+                                    </div>
+                                    <div class="services">
+                                        <i class="fas fa-check"></i>
+                                        <h4>Top Level Doctors</h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde maiores
+                                            cupiditate a fugit cumque sapiente numquam illum sit assumenda ducimus
+                                            culpa, necessitatibus praesentium repellat voluptate esse aspernatur tempore
+                                            laboriosam maxime perspiciatis reiciendis.</p>
+                                    </div>
+                                    <div class="services">
+                                        <i class="fas fa-check"></i>
+                                        <h4>Dedicated Patient Care</h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde maiores
+                                            cupiditate a fugit cumque sapiente numquam illum sit assumenda ducimus
+                                            culpa, necessitatibus praesentium repellat voluptate esse aspernatur tempore
+                                            laboriosam maxime perspiciatis reiciendis.</p>
+                                    </div>
+                                    <div class="services">
+                                        <i class="fas fa-check"></i>
+                                        <h4>24/7 Emergency</h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde maiores
+                                            cupiditate a fugit cumque sapiente numquam illum sit assumenda ducimus
+                                            culpa, necessitatibus praesentium repellat voluptate esse aspernatur tempore
+                                            laboriosam maxime perspiciatis reiciendis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="specilities">
+        <div class="container">
+            <br>
+            <h1><span class="text-primary">Our</span> Specialities</h1>
+            <hr>
+            <br>
+            <div class="row">
+                <div class="carddd">
+                    <h6 class="text-primary">Paediatrics</h6>
+                    <img src="./imgs/img3.jpg" class="my-4" alt="">
+                    <p>Specialists to care and treat children</p>
+                </div>
+                <div class="carddd">
+                    <h6 class="text-primary">Psychiatry</h6>
+                    <img src="./imgs/img4.jpg" class="my-4" alt="">
+                    <p>Specialists to help treat mental health</p>
+                </div>
+                <div class="carddd">
+                    <h6 class="text-primary">Dermatology</h6>
+                    <img src="./imgs/img2.jpg" class="my-4" alt="">
+                    <p>Specialists for skin and hair treatments</p>
+                </div>
+                <div class="carddd">
+                    <h6 class="text-primary">Cold, Cough and Fever</h6>
+                    <img src="./imgs/img1.jpg" class="my-4" alt="">
+                    <p>For common health concerns</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="aboutUs">
+        <div class="container">
+            <br>
+            <br>
+            <h1><span class="text-primary">About</span> Us</h1>
+            <hr>
+            <br>
+            <div class="about">
+                <h4>Our Mission</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae animi minima error delectus
+                    doloremque officia voluptas soluta, minus recusandae architecto pariatur earum natus officiis velit
+                    assumenda magnam, porro nemo harum cumque excepturi? Est in consectetur perspiciatis veniam dolorem
+                    facere hic id, voluptatibus similique possimus repellendus a reprehenderit at necessitatibus
+                    recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, similique tempora
+                    eveniet ratione reiciendis tenetur sequi fugit, a facere placeat velit, repellendus nam optio modi
+                    nemo recusandae. Voluptate adipisci nesciunt magni veniam est nemo fuga, dolore, officia rerum aut
+                    fugiat. Quaerat non quidem nisi, blanditiis dolore animi ullam dicta dolores! </p>
+            </div>
+            
+            <div class="about">
+                <h4>Our Values</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae animi minima error delectus
+                    doloremque officia voluptas soluta, minus recusandae architecto pariatur earum natus officiis velit
+                    assumenda magnam, porro nemo harum cumque excepturi? Est in consectetur perspiciatis veniam dolorem
+                    facere hic id, voluptatibus similique possimus repellendus a reprehenderit at necessitatibus
+                    recusandae!</p>
+                <ol>
+                    <li>Our Relationship with the People We Serve:</li>
+                    <ul>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore necessitatibus
+                            voluptate rem, magni quaerat dicta repellat? Repudiandae, quas autem.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore necessitatibus
+                            voluptate rem, magni quaerat dicta repellat? Repudiandae, quas autem.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore necessitatibus
+                            voluptate rem, magni quaerat dicta repellat? Repudiandae, quas autem.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore necessitatibus
+                            voluptate rem, magni quaerat dicta repellat? Repudiandae, quas autem.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore necessitatibus
+                            voluptate rem, magni quaerat dicta repellat? Repudiandae, quas autem.</li>
+                    </ul>
+                    <li>Our Approach to Health Care:</li>
+                    <ul>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore necessitatibus
+                            voluptate rem, magni quaerat dicta repellat? Repudiandae, quas autem.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore necessitatibus
+                            voluptate rem, magni quaerat dicta repellat? Repudiandae, quas autem.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore necessitatibus
+                            voluptate rem, magni quaerat dicta repellat? Repudiandae, quas autem.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore necessitatibus
+                            voluptate rem, magni quaerat dicta repellat? Repudiandae, quas autem.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt labore necessitatibus
+                            voluptate rem, magni quaerat dicta repellat? Repudiandae, quas autem.</li>
+                    </ul>
+                   
+                    
+                </ol>
+            </div>
+        </div>
+        <br>
+    </section>
+    <footer class="text-center text-lg-start text-white" style="background-color: #0E1B23">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">
+                            <span class="text-primary">S</span>
+                            <span>W</span>
+                            <span>A</span>
+                            <span>S</span>
+                            <span>T</span>
+                            <span>H</span>
+                            <span>Y</span>
+                            <span>A</span>
+                        </h5>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Molestiae modi cum ipsam ad, illo possimus laborum ut
+                            reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
+                            Reiciendis assumenda iusto sapiente inventore animi?
+                        </p>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="mb-4" />
+
+            <!-- Section: CTA -->
+            <section class="">
+                <p class="d-flex justify-content-center align-items-center">
+                    <span class="me-3">Register for free</span>
+                    <a href="./signup.html"><button type="button" class="btn btn-outline-primary ">
+                            Sign up!
+                        </button></a>
+                </p>
+            </section>
+            <!-- Section: CTA -->
+
+            <hr class="mb-4" />
+
+            <!-- Section: Social media -->
+            <section class="pb-3 text-center">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+    <div class="container-fluid d-flex justify-content-center align-items-center my-2 bg-dark">
+        <h5>Developed And Designed By Siddharth Saraswat(7459819855) &copy 2021</h5>
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="../static/JS/index.js"></script>
+</body>
+
+</html>
